@@ -18,11 +18,11 @@ public class Hospital_Regional_T1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Scanner respuesta = new Scanner(System.in);
-        Paciente pac = new Paciente();
         ControladorPaciente crl = new ControladorPaciente();
         System.out.println("Desea ingresar un paciente? S/N");
         String rspa = respuesta.nextLine();
         while(rspa.equalsIgnoreCase("S")){
+            Paciente pac = new Paciente();
                 System.out.println("Ingresa tipo de Doc: CE / DNI");
                 String tipo_documento = scan.nextLine();
                 
