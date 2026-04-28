@@ -54,6 +54,8 @@ public class Hospital_Regional_T1 {
                 System.out.println("Ingrese si presenta alergias");
                 String alergia =scan.nextLine();
                 
+                System.out.println("Ingrese edad");
+                int edad = scan.nextInt();
                 
                 pac.setTipo_documento(tipo_documento);
                 pac.setNro_documento(nro_documento);
@@ -63,7 +65,7 @@ public class Hospital_Regional_T1 {
                 pac.setCorreo(correo);
                 pac.setTipo_sangre(nombre);
                 pac.setAlergias(alergia);
-                pac.setEdad(0);
+                pac.setEdad(edad);
                 
                 
                 crl.Agregar_Paciente(pac);
