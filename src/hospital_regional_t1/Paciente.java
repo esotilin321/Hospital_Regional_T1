@@ -34,7 +34,18 @@ public class Paciente {
     }
 
     public void setNro_documento(String nro_documento) {
-        this.nro_documento = nro_documento;
+        if (tipo_documento.equals("DNI")){
+        }if(nro_documento.length() == 8){
+            this.nro_documento = nro_documento;
+        }
+        if (tipo_documento.equals("CE")){
+        if (nro_documento.length() == 9){
+            this.nro_documento = nro_documento;
+        }
+        } else if(nro_documento.length() > 8 && nro_documento.length() < 9){
+            System.out.println("Datos incorrectos");
+        }
+            
     }
 
     public String getApellido() {

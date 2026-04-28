@@ -23,22 +23,13 @@ public class Hospital_Regional_T1 {
         System.out.println("Desea ingresar un paciente? S/N");
         String rspa = respuesta.nextLine();
         while(rspa.equalsIgnoreCase("S")){
-        boolean DocValido = false;
-            String nro_documento = " ";
                 System.out.println("Ingresa tipo de Doc: CE / DNI");
                 String tipo_documento = scan.nextLine();
-                while(!DocValido) {
-                    System.out.println("Ingresa número de documento");
-                    nro_documento = scan.nextLine();
-                    if (tipo_documento.equals("DNI")&& nro_documento.length() != 8) {
-                    System.out.println("El DNI debe tener 8 dígitos.");
-                    }if (tipo_documento.equals("CE") && nro_documento.length() != 9) {
-                    System.out.println("El Carnet de Extranjería debe tener 9 dígitos.");
-                    }else {
-                        DocValido = true;
-                        System.out.println("Validado ");
-                    }    
-                }
+                
+                System.out.println("Ingresa número de documento");
+                String nro_documento = scan.nextLine();
+                       
+                
                 System.out.println("Ingresa apellidos");
                 String aellido = scan.nextLine();
                 
@@ -69,10 +60,13 @@ public class Hospital_Regional_T1 {
                 
                 
                 crl.Agregar_Paciente(pac);
-                crl.Listar_Paciente();
+                
                 
                 System.out.println("Desea ingresar otro personaje? S/N");
                 rspa = respuesta.nextLine();
+                if (rspa.equals("N")){
+                crl.Listar_Paciente();
+                }
         }
                 
     }
